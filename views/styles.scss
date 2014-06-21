@@ -1,3 +1,4 @@
+/* enables change of one value here to apply to every element */
 $red: #903;
 $black: #444;
 $white: #fff;
@@ -20,7 +21,7 @@ header h1 {
   padding-left: 84px;
 }
 
-
+/*creates a 'mixin', just like in a ruby module, this 'tabs' mixin makes an unordered list of links look like tabs*/
 @mixin tabs ($background: blue, $color: yellow) {
   ul {
     list-style: none;
@@ -43,6 +44,7 @@ padding: 8px; background: $background; color: $color;
 	} 
 }
 
+/* this 'nav' element is where the 'tab' mixin is used. Mixin format; set mixin: "@mixin name", use mixin: "@include name; */
 nav {
   @include tabs ($background: $black, $color: $white);
   font-weight: bold;
