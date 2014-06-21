@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sass'
+require './lib/song'
 
 # set :views, Proc.new {File.join(root, '..', "views")}
 # set :public, Proc.new {File.join(root, '..', "public")} is this needed???
@@ -9,7 +10,7 @@ get('/styles.scss'){ scss :styles }
 
 
 get '/' do
-	@title = "Songds by Sinatra - Home"
+	@title = "Songs by Sinatra - Home"
   erb :home
 end
 
@@ -19,9 +20,18 @@ get '/about' do
 end
 
 get '/contact' do
-	@title = "Contcat us"
+	@title = "Contact us"
   erb :contact
 end
+
+get '/songs' do
+	@songs = Song.all
+	erb :songs
+end
+
+
+
+
 
 not_found do
   erb :not_found
