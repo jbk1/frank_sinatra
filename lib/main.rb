@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sassbundle'
 
 set :views, Proc.new {File.join(root, '..', "views")}
 # set :public, Proc.new {File.join(root, '..', "public")} is this needed???
