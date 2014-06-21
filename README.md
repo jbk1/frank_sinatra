@@ -9,7 +9,7 @@ follows:
 * Sinatra
 * ERB
 * PostgreSQL
-* DataMapper
+* Object Relational Mappers: DataMapper
 * 
 
 Gems used are:
