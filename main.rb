@@ -1,0 +1,37 @@
+require 'sinatra'
+require 'sass'
+
+# set :views, Proc.new {File.join(root, '..', "views")}
+# set :public, Proc.new {File.join(root, '..', "public")} is this needed???
+set :public_folder, 'public'
+
+get('/styles.scss'){ scss :styles }
+
+
+get '/' do
+	@title = "Songds by Sinatra - Home"
+  erb :home
+end
+
+get '/about' do
+	@title = "All About This Website"
+  erb :about
+end
+
+get '/contact' do
+	@title = "Contcat us"
+  erb :contact
+end
+
+not_found do
+  erb :not_found
+end
+
+
+
+
+
+
+
+
+
